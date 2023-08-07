@@ -1,0 +1,66 @@
+{% extends 'navigationbar.html' %}
+
+{% block content %}
+
+
+
+
+<style>
+    /* body{
+        background-color: aquamarine;
+} */
+    .table .table-header{
+        background-color: #fec107;
+        font-size: 1rem;
+    }
+</style>
+
+<div class="container">
+    <h1 class="text-center mt-3"> View Doctor</h1>
+
+    <div class="row text-center">
+        <div class="col-md-12">
+            <!-- <table id="example" class="table mt-4">
+                <tr class="table-header">
+                    <th class="cell">S.no</th>
+                    <th class="cell">Name</th>
+                    <th class="cell">Mobile</th>
+                    <th class="cell">Speciality</th>
+                </tr>
+                {% for doctors in doctor %}
+                <tr  class="active">
+                    <td>{{doctors.id}}</td>
+                    <td>{{doctors.name}}</td>
+                    <td>{{doctors.mobile}}</td>
+                    <td>{{doctors.special}}</td>
+                </tr>
+                {% endfor %}
+                
+            </table> -->
+
+            <table id="example" class="table table-hover">
+                <thead class="">
+                  <tr class = 'table-dark text-center'>
+                    <th scope="col">S.no</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Speciality</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                {% for doctors in doctor %}  
+                  <tr>
+                    <th scope="row">{{doctors.id}}</th>
+                    <td>{{doctors.name}}</td>
+                    <td>{{doctors.mobile}}</td>
+                    <td>{{doctors.special}}</td>
+                  </tr>
+                  {% endfor %}  
+                </tbody>
+              </table>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
